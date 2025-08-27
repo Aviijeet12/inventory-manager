@@ -145,8 +145,8 @@ The application comes pre-loaded with sample products including:
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/Aviijeet12)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/avijit-pratap-singh-587313252)
+- GitHub: [@Aviijeet12](https://github.com/Aviijeet12)
+- LinkedIn: [Avijit Pratap Singh](https://linkedin.com/in/avijit-pratap-singh-587313252)
 
 ## 🙏 Acknowledgments
 
