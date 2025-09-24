@@ -1,5 +1,13 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
-  ]
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://inventory-manager-backend-zofj.onrender.com/api"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_API_URL": "https://inventory-manager-backend-zofj.onrender.com/api"
+    }
+  }
 }

@@ -1,7 +1,13 @@
 import axios from 'axios';
 import { Product } from '../types/Product';
+import { config } from '../config/env';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/api';
+const API_BASE_URL = config.API_URL;
+
+// Debug logging for production
+console.log('API Service Initialized with:', API_BASE_URL);
+console.log('Environment:', process.env.NODE_ENV);
+console.log('REACT_APP_API_URL:', process.env.REACT_APP_API_URL);
 
 const api = axios.create({
   baseURL: API_BASE_URL,
