@@ -1,0 +1,1 @@
+Build timestamp: September 24, 2025 - Force rebuild with environment variables
