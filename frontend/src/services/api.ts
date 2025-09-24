@@ -2,12 +2,14 @@ import axios from 'axios';
 import { Product } from '../types/Product';
 import { config } from '../config/env';
 
+// Use hardcoded production API URL
 const API_BASE_URL = config.API_URL;
 
-// Debug logging for production
-console.log('API Service Initialized with:', API_BASE_URL);
+// Debug logging
+console.log('=== API SERVICE DEBUG ===');
+console.log('API_BASE_URL:', API_BASE_URL);
 console.log('Environment:', process.env.NODE_ENV);
-console.log('REACT_APP_API_URL:', process.env.REACT_APP_API_URL);
+console.log('==========================');
 
 const api = axios.create({
   baseURL: API_BASE_URL,

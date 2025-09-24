@@ -11,11 +11,17 @@ const Dashboard: React.FC = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
+        console.log('Dashboard: Attempting to fetch products...');
         const data = await productApi.getAll();
+        console.log('Dashboard: Successfully fetched products:', data);
         setProducts(data);
       } catch (err) {
-        setError('Failed to load products');
-        console.error('Error fetching products:', err);
+        console.error('Dashboard: Error fetching products:', err);
+        if (err instanceof Error) {
+          setError(`Failed to load products: ${err.message}`);
+        } else {
+          setError('Failed to load products: Unknown error');
+        }
       } finally {
         setLoading(false);
       }
