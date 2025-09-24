@@ -1,22 +1,26 @@
 {
   "version": 2,
-  "name": "inventory-manager-frontend",
-  "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/build",
-  "installCommand": "cd frontend && npm install",
-  "framework": null,
-  "env": {
-    "REACT_APP_API_URL": "https://inventory-manager-backend-zofj.onrender.com/api"
-  },
-  "build": {
-    "env": {
-      "REACT_APP_API_URL": "https://inventory-manager-backend-zofj.onrender.com/api"
-    }
-  },
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build",
+        "framework": null,
+        "env": {
+          "REACT_APP_API_URL": "https://inventory-manager-backend-zofj.onrender.com/api"
+        }
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
